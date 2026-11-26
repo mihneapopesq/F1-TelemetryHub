@@ -1,0 +1,55 @@
+{
+  "realm": "f1-telemetry",
+  "enabled": true,
+  "registrationAllowed": true,
+  "defaultRole": { "name": "mechanic" },
+  "roles": {
+    "realm": [
+      { "name": "admin" },
+      { "name": "race_engineer" },
+      { "name": "mechanic" }
+    ]
+  },
+  "clients": [
+    {
+      "clientId": "f1-api",
+      "enabled": true,
+      "publicClient": true,
+      "directAccessGrantsEnabled": true,
+      "standardFlowEnabled": true,
+      "redirectUris": ["*"]
+    }
+  ],
+  "users": [
+    {
+      "username": "admin",
+      "enabled": true,
+      "emailVerified": true,
+      "firstName": "Team",
+      "lastName": "Admin",
+      "email": "admin@f1.com",
+      "credentials": [{ "type": "password", "value": "password", "temporary": false }],
+      "realmRoles": ["admin"]
+    },
+    {
+      "username": "engineer",
+      "enabled": true,
+      "emailVerified": true,
+      "firstName": "Race",
+      "lastName": "Engineer",
+      "email": "engineer@f1.com",
+      "credentials": [{ "type": "password", "value": "password", "temporary": false }],
+      "realmRoles": ["race_engineer"]
+    },
+    {
+      "username": "mechanic",
+      "enabled": true,
+      "emailVerified": true,
+      "firstName": "Pit",
+      "lastName": "Mechanic",
+      "email": "mechanic@f1.com",
+      "credentials": [{ "type": "password", "value": "password", "temporary": false }],
+      "realmRoles": ["mechanic"]
+    }
+  ]
+}
